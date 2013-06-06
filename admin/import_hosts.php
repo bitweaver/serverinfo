@@ -38,10 +38,10 @@ if( !empty( $_REQUEST['import_hosts'] ) ) {
 						}
 						break;
 					case 'CNAME':
-						if( $metaId = meta_get_attribute_id( 'CNAME' ) ) {
-							$metaStore['metatt'][$metaId] = meta_get_value_id( $hostData[2] );
-							$feedbackLine .= ' and added CNAME '.$hostData[2];
-						}
+						$aliasStore['title'] = $hostPage->getTitle(); // required for saving
+						$aliasStore['alias_string'] = $hostData[2];
+						$hostPage->store( $aliasStore );
+						$feedbackLine .= ' and created an alias '.$hostData[2];
 						break;
 				}
 				$feedback['success'][] = $feedbackLine;
