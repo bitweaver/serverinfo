@@ -10,6 +10,7 @@ $feedback = array();
 if( !empty( $_REQUEST['import_hosts'] ) ) {
 	if( !empty( $_FILES['serverinfo_hosts']['tmp_name'] ) ) {
 		if( $hostFile = fopen( $_FILES['serverinfo_hosts']['tmp_name'], 'r' ) ) {
+unset( $_FILES );
 			$feedbackLine = '';
 			while( $hostLine = trim( fgets( $hostFile ) ) ) {
 				$feedbackLine = '';
