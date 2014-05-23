@@ -13,7 +13,7 @@
 				<label>Select Hosts File</label>
 				<input type="file" name="serverinfo_hosts">
 				<span class="help-block">File should have one host per line, in "[name] [type] [address]" format</span>
-				<button type="submit" name="import_hosts" value="import_hosts" class="btn">Import Hosts</button>
+				<button type="submit" name="import_hosts" value="import_hosts" class="btn btn-default">Import Hosts</button>
 			</fieldset>
 		{/form}
 	</div>
